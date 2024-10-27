@@ -25,7 +25,6 @@ export class TaskFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit() {

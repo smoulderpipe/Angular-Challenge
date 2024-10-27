@@ -1,5 +1,5 @@
 <div class="d-flex">
-    <button class="me-2">ALL</button>
-    <button class="me-2">PENDING</button>
-    <button>COMPLETED</button>
+    <button class="me-2" (click)="onShowAllTasks()">ALL</button>
+    <button class="me-2" (click)="onShowPendingTasks()">PENDING</button>
+    <button (click)="onShowCompletedTasks()">COMPLETED</button>
 </div>

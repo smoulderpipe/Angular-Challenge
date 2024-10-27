@@ -7,7 +7,7 @@
         <div class="col">
             <div class="row">
                 <div class="col mb-3">
-                    <app-filter-buttons></app-filter-buttons>
+                    <app-filter-buttons (onShowAll)="loadAllTasksAndUpdateCounters()" (onShowPending)="loadPendingTasks()" (onShowCompleted)="loadCompletedTasks()"></app-filter-buttons>
                 </div>
                 <div class="col">
                     <app-counters [totalTasks]="totalTasks" 

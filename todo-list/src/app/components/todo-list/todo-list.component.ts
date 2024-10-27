@@ -24,7 +24,7 @@ export class TodoListComponent implements OnInit {
   constructor(private taskListService: TaskListService, private router: Router) { }
 
   ngOnInit() {
-    this.loadTasksAndUpdateCounters();
+    this.loadAllTasksAndUpdateCounters();
   }
 
   updateCounters() {
@@ -33,15 +33,23 @@ export class TodoListComponent implements OnInit {
     this.pendingTasks = this.taskListService.countPendingTasks();
   }
 
-  loadTasksAndUpdateCounters() {
+  loadAllTasksAndUpdateCounters() {
     this.updateCounters();
     this.tasks = this.taskListService.getAllTasks();
     console.log("Current tasks:", this.tasks);
   }
 
+  loadPendingTasks(){
+    this.tasks = this.taskListService.getAllTasks().filter(task => !task.completed);
+  }
+
+  loadCompletedTasks(){
+    this.tasks = this.taskListService.getAllTasks().filter(task => task.completed);
+  }
+
   createTask(task: Task) {
     this.taskListService.addTask(task);
-    this.loadTasksAndUpdateCounters();
+    this.loadAllTasksAndUpdateCounters();
   }
 
   editTask(task: Task) {
@@ -50,17 +58,17 @@ export class TodoListComponent implements OnInit {
 
   removeTask(index: number) {
     this.taskListService.deleteTask(index);
-    this.loadTasksAndUpdateCounters();
+    this.loadAllTasksAndUpdateCounters();
   }
 
   markTaskAsComplete(index: number) {
     this.taskListService.toggleTaskCompletion(index);
-    this.loadTasksAndUpdateCounters();
+    this.loadAllTasksAndUpdateCounters();
   }
 
   markTaskAsPending(index: number) {
     this.taskListService.unToggleTaskCompletion(index);
-    this.loadTasksAndUpdateCounters();
+    this.loadAllTasksAndUpdateCounters();
   }
 
 }
