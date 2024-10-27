@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-counters',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./counters.component.scss']
 })
 export class CountersComponent {
-// Deve permettere di contare i task mostrati nella lista ("tutti", "completati").
+  // Deve permettere di contare i task mostrati nella lista ("tutti", "completati").
+
+  @Input() totalTasks!: number;
+  @Input() completedTasks!: number;
+  @Input() pendingTasks!: number;
 }

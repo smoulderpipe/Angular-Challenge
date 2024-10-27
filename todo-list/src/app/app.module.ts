@@ -8,7 +8,7 @@ import { TaskCardComponent } from './components/todo-list/task-card/task-card.co
 import { FilterButtonsComponent } from './components/todo-list/filter-buttons/filter-buttons.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CountersComponent } from './components/todo-list/counters/counters.component';
-import { EditTaskComponent } from './components/edit-task/edit-task.component';
+import { EditTaskComponent } from './components/todo-list/edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
