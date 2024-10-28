@@ -24,15 +24,15 @@ Il progetto consente agli utenti di gestire e organizzare i propri task con vari
 
 ## 🚀 Installazione e Configurazione
 
-**Clona la repository**
+**Clona la repository tramite CLI**
 
 	git clone https://github.com/smoulderpipe/Angular-Challenge.git
 
 **Installa le dipendenze:**
 
-    npm install
+    npm i
 
-**Avvia l'applicazione**
+**Apri la cartella del progetto e avvia l'applicazione**
 
     ng serve -o
 L'app sarà disponibile all'indirizzo http://localhost:4200.
