@@ -5,10 +5,11 @@ import { Component, Input } from '@angular/core';
   templateUrl: './counters.component.html',
   styleUrls: ['./counters.component.scss']
 })
-export class CountersComponent {
-  // Deve permettere di contare i task mostrati nella lista ("tutti", "completati").
 
+// Visualizza i contatori dei task ("totali", "completati").
+export class CountersComponent {
+
+  // Riceve i valori dalla to do list (genitore)
   @Input() totalTasks!: number;
   @Input() completedTasks!: number;
-  @Input() pendingTasks!: number;
 }

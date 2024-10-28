@@ -7,14 +7,17 @@ import { TaskListService } from 'src/app/services/task-list.service';
   templateUrl: './task-card.component.html',
   styleUrls: ['./task-card.component.scss']
 })
-export class TaskCardComponent {
 
-  // Rappresenta ciascun task nell'elenco.
+// Contiene:
+// - ciascun task nell'elenco
+// - i button per segnarlo come completato/in sospeso, o per eliminarlo/modificarlo
+
+export class TaskCardComponent {
 
   // Riceve i task dal componente genitore.
   @Input() task!: Task;
 
-  // Emette eventi verso il componente genitore per segnare il task come completato/in sospeso, o per modificare/eliminare il task.
+  // Emette eventi verso il componente genitore per segnare il task come completato/in sospeso, o per modificarlo/eliminarlo
   @Output() delete = new EventEmitter<void>;
   @Output() edit = new EventEmitter<Task>();
   @Output() markAsComplete = new EventEmitter<void>;
@@ -22,7 +25,6 @@ export class TaskCardComponent {
 
   constructor(private taskListService: TaskListService) { }
 
-  // Gestisce i pulsanti per cancellare, segnare come completato e modificare il task
   onDelete(): void {
     this.delete.emit();
   }
@@ -36,7 +38,7 @@ export class TaskCardComponent {
   }
 
   onEdit() {
-    this.taskListService.setCurrentTask(this.task);
+    this.taskListService.setCurrentTask(this.task); // Setta il task come "current task" per passarlo all'edit task component
     this.edit.emit(this.task);
   }
 

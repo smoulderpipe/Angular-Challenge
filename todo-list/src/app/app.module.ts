@@ -6,7 +6,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TaskFormComponent } from './components/todo-list/task-form/task-form.component';
 import { TaskCardComponent } from './components/todo-list/task-card/task-card.component';
 import { FilterButtonsComponent } from './components/todo-list/filter-buttons/filter-buttons.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CountersComponent } from './components/todo-list/counters/counters.component';
 import { EditTaskComponent } from './components/todo-list/edit-task/edit-task.component';
 
@@ -23,7 +23,8 @@ import { EditTaskComponent } from './components/todo-list/edit-task/edit-task.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

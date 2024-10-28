@@ -2,7 +2,7 @@
     <h1 class="text-center">Todo List</h1>
     <div class="row mt-5">
         <div class="col-3">
-            <h3>New task</h3><app-task-form (onSave)="createTask($event)"></app-task-form>
+            <h3>New task</h3><app-task-form [(task)]="task" (onSave)="createTask($event)"></app-task-form>
         </div>
         <div class="col">
             <div class="row">
@@ -11,8 +11,7 @@
                 </div>
                 <div class="col">
                     <app-counters [totalTasks]="totalTasks" 
-                    [completedTasks]="completedTasks" 
-                    [pendingTasks]="pendingTasks"></app-counters>
+                    [completedTasks]="completedTasks"></app-counters>
                 </div>
             </div>
 
