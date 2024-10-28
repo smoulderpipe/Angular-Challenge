@@ -17,7 +17,7 @@ export class TaskListService {
     this.tasks = [
       { id: 1, name: 'Grocery shopping', description: `Buy what's needed to cook a sheperds pie for tomorrow night.`, completed: false },
       { id: 2, name: 'Organize a volleyball game', description: `Tasha is free on Friday and Saturday nights, Michael is free only on Thursday afternoons and Friday nights, Jason t.b.a.` , completed: false },
-      { id: 3, name: 'Taking back clothes at the dry cleaners', description: `Bring €15 for the pants and €25 for the jacket`, completed: false }
+      { id: 3, name: 'Pick up your clothes at the dry cleaners', description: `Bring €15 for the pants and €25 for the jacket`, completed: false }
     ];
   }
 
