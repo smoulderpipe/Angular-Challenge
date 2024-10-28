@@ -11,7 +11,7 @@ Il progetto consente agli utenti di gestire e organizzare i propri task con vari
 
 ## 🛠️ Tecnologie Utilizzate
 
-- **Angular 16.2**: Framework principale per lo sviluppo dell'interfaccia utente.
+- **Angular 16.1**: Framework principale per lo sviluppo dell'interfaccia utente.
 - **TypeScript 5.1.3**: Linguaggio di programmazione utilizzato per lo sviluppo.
 - **HTML & SCSS**: Utilizzati per la struttura e lo stile delle pagine.
 - **Bootstrap 5.3.3**: Framework CSS per il design reattivo.
