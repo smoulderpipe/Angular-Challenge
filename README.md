@@ -2,6 +2,10 @@
 Questa repository contiene una To-Do List sviluppata con Angular come parte di una challenge.<br>
 Il progetto consente agli utenti di gestire e organizzare i propri task con varie funzionalità.
 
+![Screenshot_7](https://github.com/user-attachments/assets/aed3ad81-04d5-4238-be60-a1c9a848a82b)
+
+
+
 ## ✨ Funzionalità Principali
 
 - **Gestione dei Task**: visualizza, aggiungi, modifica e cancella task.
