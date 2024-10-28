@@ -1,6 +1,8 @@
 <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
-    <div><input formControlName="taskName" placeholder="Task Name"></div>
-    <div><input formControlName="taskDescription" placeholder="Task Description"></div>
-    <button type="submit" *ngIf="!isEditMode">Add Task</button>
-    <button type="submit" *ngIf="isEditMode">Edit Task</button>
+    <div class="mb-2"><input formControlName="taskName" placeholder="Task Name"></div>
+    <div class="mb-2"><textarea formControlName="taskDescription" placeholder="Task Description"></textarea></div>
+    <button type="submit" [disabled]="!taskForm.valid" 
+          class="py-1 rounded-pill py-1 text-uppercase">
+    {{ isEditMode ? 'Edit Task' : 'Add Task' }}
+  </button>
 </form>

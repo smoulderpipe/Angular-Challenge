@@ -1,9 +1,9 @@
 <div *ngIf="task">
-    <div class="card" [ngClass]="{ 'bg-dark text-white': task.completed }">
+    <div class="card pt-2" [ngClass]="{ 'task-completed': task.completed }">
         <div class="row p-4">
-            <div class="col">
-                <p class="h4">{{ task.name }}</p>
-                <p>{{ task.description }}</p>
+            <div class="col-9">
+                <p class="h4 task-name">{{ task.name | slice:0:35 }}<span *ngIf="task.name.length > 35">...</span></p>
+                <p class="task-description">{{ task.description | slice:0:80 }}<span *ngIf="task.description.length > 80">...</span></p>
             </div>
             <div class="col d-flex justify-content-end">
                 <a (click)="onDelete()" class="bg-transparent border-0 text-black me-3 align-content-center">

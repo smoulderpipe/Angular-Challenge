@@ -1,3 +1,41 @@
 a {
     cursor: pointer;
 }
+.card {
+    border-radius: 0px;
+    border: 2px solid black;
+}
+.task-completed {
+    background: repeating-linear-gradient(45deg,
+            rgb(115, 115, 115),
+            rgb(115, 115, 115) 10px,
+            rgb(133, 133, 133) 10px,
+            rgb(133, 133, 133) 20px);
+    color: rgb(244, 244, 244);
+    text-decoration: line-through;
+    
+}
+
+.task-completed i {
+    color: rgb(244, 244, 244);
+}
+
+.task-name {
+    background-color: rgb(197, 63, 63);;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    display: inline;
+}
+
+.task-completed .task-name {
+    background: rgb(36, 36, 36);
+    color: rgb(133, 133, 133);
+}
+.task-completed .task-description {
+    color: rgb(221, 221, 221);
+}
+
+.task-description {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}

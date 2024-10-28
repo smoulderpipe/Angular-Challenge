@@ -15,8 +15,8 @@ export class TaskListService {
   // Prepara una lista di placeholder tasks
   constructor() {
     this.tasks = [
-      { id: 1, name: 'Task 1', description: 'Description 1', completed: false },
-      { id: 2, name: 'Task 2', description: 'Description 2', completed: false },
+      { id: 1, name: 'Task 1', description: 'Example description for task 1', completed: false },
+      { id: 2, name: 'Task 2', description: 'Example description for task 2, this is a really long description made for testing character limits', completed: false },
     ];
   }
 
