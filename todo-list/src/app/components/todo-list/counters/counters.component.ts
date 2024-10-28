@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-counters',
   templateUrl: './counters.component.html',
   styleUrls: ['./counters.component.scss']
 })
+
+// Visualizza i contatori dei task ("totali", "completati").
 export class CountersComponent {
-// Deve permettere di contare i task mostrati nella lista ("tutti", "completati").
+
+  // Riceve i valori dalla to do list (genitore)
+  @Input() totalTasks!: number;
+  @Input() completedTasks!: number;
 }

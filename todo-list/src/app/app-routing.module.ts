@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '', component: TodoListComponent
   },
-  { path: 'edit-task', component: EditTaskComponent }
+  { path: 'edit-task/:id', component: EditTaskComponent }
 ];
 
 @NgModule({

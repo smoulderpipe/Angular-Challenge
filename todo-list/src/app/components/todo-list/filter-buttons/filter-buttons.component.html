@@ -1,5 +1,5 @@
 <div class="d-flex">
-    <button class="me-2">ALL</button>
-    <button class="me-2">PENDING</button>
-    <button>COMPLETED</button>
+    <button class="border border-2 border-black me-2 px-4 py-1 rounded-pill" (click)="onShowAllTasks()" [ngClass]="{'active': activeFilter === 'all'}" >ALL</button>
+    <button class="border border-2 border-black me-2 px-4 py-1 rounded-pill" (click)="onShowPendingTasks()" [ngClass]="{'active': activeFilter === 'pending'}" >PENDING</button>
+    <button class="border border-2 border-black px-4 py-1 rounded-pill" (click)="onShowCompletedTasks()" [ngClass]="{'active': activeFilter === 'completed'}" >COMPLETED</button>
 </div>
